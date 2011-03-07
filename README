@@ -1,0 +1,2 @@
+This is a small program that calculates your weight on different planets in 
+the solar system. It currently needs to have the main UI file build via pyuic4.
