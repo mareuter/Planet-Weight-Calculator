@@ -66,7 +66,7 @@ class build_qt(Command):
         """
         # Make dialogs
         idir = 'ui'
-        ddir = os.join.path(package, idir)
+        ddir = os.path.join(package, idir)
         import dircache
         uifiles = [f for f in dircache.listdir(idir) if f.endswith('.ui')]
         for uifile in uifiles:
