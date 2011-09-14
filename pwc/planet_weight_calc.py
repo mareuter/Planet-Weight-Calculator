@@ -16,7 +16,8 @@ PLANETS = {
     "pluto": 0.059
     }
 
-class PlanetWeightCalc(QtGui.QDialog, ui_planet_weight.Ui_PlanetWeightDialog):
+class PlanetWeightCalculator(QtGui.QDialog, 
+                             ui_planet_weight.Ui_PlanetWeightDialog):
     def __init__(self, parent=None):
         super(PlanetWeightCalc, self).__init__(parent)
         self.setupUi(self)
