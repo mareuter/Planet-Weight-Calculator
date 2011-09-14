@@ -97,4 +97,4 @@ if __name__ == "__main__":
                          'pwc.ui': 'pwc/ui'},
           packages = ['pwc',
                       'pwc.ui'],
-          scripts = ['bin/planet_weight_calc'])
+          scripts = ['bin/planet_weight_calc.py'])
