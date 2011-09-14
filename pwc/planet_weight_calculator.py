@@ -1,6 +1,6 @@
 from PyQt4 import QtGui
 from PyQt4 import QtCore
-import ui_planet_weight
+import ui
 
 PLANETS = {
     "sun": 27.94,
@@ -16,10 +16,9 @@ PLANETS = {
     "pluto": 0.059
     }
 
-class PlanetWeightCalculator(QtGui.QDialog, 
-                             ui_planet_weight.Ui_PlanetWeightDialog):
+class PlanetWeightCalculator(QtGui.QDialog, ui.Ui_PlanetWeightDialog):
     def __init__(self, parent=None):
-        super(PlanetWeightCalc, self).__init__(parent)
+        super(PlanetWeightCalculator, self).__init__(parent)
         self.setupUi(self)
         dvl = QtGui.QDoubleValidator(self)
         dvl.setBottom(0.0)
