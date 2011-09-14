@@ -64,9 +64,4 @@ class PlanetWeightCalculator(QtGui.QDialog,
             le = getattr(self, key+"LineEdit")
             le.setText("%.1f %s" % (value, self.__units))
             
-if __name__ == "__main__":
-    import sys
-    app = QtGui.QApplication(sys.argv)
-    pwc = PlanetWeightCalc()
-    pwc.show()
-    app.exec_()
+
