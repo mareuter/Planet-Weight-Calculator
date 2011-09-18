@@ -34,6 +34,12 @@ class PlanetWeightCalculator(QtGui.QDialog, ui.Ui_PlanetWeightDialog):
         if self.weightLineEdit.text().isEmpty():
             return
         else:
+            if self.__units != text and self.__units != "":
+                if self.__units == "lbs" and text == "kg":
+                    self._convertWeight(info.LBS_TO_KG)
+                else:
+                    self._convertWeight(1.0/info.LBS_TO_KG)
+                self.weightLineEdit.setText("%.1f" % self.__weight)
             self.__units = text
             self._writeCalc()
 
@@ -43,6 +49,9 @@ class PlanetWeightCalculator(QtGui.QDialog, ui.Ui_PlanetWeightDialog):
 
     def _calcWeight(self, factor):
         return self.__weight * factor
+
+    def _convertWeight(self, factor):
+        self.__weight *= factor
 
     def _writeCalc(self):
         for key in info.PLANETS:
