@@ -7,6 +7,7 @@ class PlanetWeightCalculator(QtGui.QDialog, ui.Ui_PlanetWeightDialog):
     def __init__(self, parent=None):
         super(PlanetWeightCalculator, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowIcon(QtGui.QIcon(":/pwc.svg"))
         dvl = QtGui.QDoubleValidator(self)
         dvl.setBottom(0.0)
         dvl.setDecimals(1)
