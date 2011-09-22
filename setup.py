@@ -55,15 +55,14 @@ class build_qt(Command):
         pass
 
     def run(self):
-        """
         # Make resources
         qtr = "resources.qrc"
-        pyqtr = "%s/dp_utils/qrc_resources.py" % package
+        pyqtr = "%s/info/qrc_resources.py" % package
         if isNewer(qtr, pyqtr):
             pyrcc_cmd = "pyrcc4 -o %s %s" % (pyqtr, qtr)
             print pyrcc_cmd
             exec_cmd(pyrcc_cmd)
-        """
+
         # Make dialogs
         idir = 'ui'
         ddir = os.path.join(package, idir)
@@ -90,9 +89,9 @@ if __name__ == "__main__":
           license = 'MIT Academic',
           cmdclass = {'install_data': smart_install_data,
                       'build_qt': build_qt},
-          data_files = [ ('pwc/ui', glob.glob('%s/ui/*.ui' % package)) ],
+          data_files = [ ('pwc/ui', glob.glob('%s/ui/*.ui' % package)),
+                        ('pwc/images', glob.glob('images/*.svg')) ],
                           #('dgspowder/images', glob.glob('images/*.png')+
-                          #glob.glob('images/*.svg')) ],
           package_dir = {'pwc': 'pwc',
                          'pwc.ui': 'pwc/ui',
                          'pwc.info': 'pwc/info'},
