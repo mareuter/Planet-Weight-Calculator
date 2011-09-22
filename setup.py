@@ -94,7 +94,9 @@ if __name__ == "__main__":
                           #('dgspowder/images', glob.glob('images/*.png')+
                           #glob.glob('images/*.svg')) ],
           package_dir = {'pwc': 'pwc',
-                         'pwc.ui': 'pwc/ui'},
+                         'pwc.ui': 'pwc/ui',
+                         'pwc.info': 'pwc/info'},
           packages = ['pwc',
-                      'pwc.ui'],
+                      'pwc.ui',
+                      'pwc.info'],
           scripts = ['bin/planet_weight_calc.py'])
