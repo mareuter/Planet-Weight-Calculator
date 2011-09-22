@@ -43,6 +43,16 @@ class PlanetWeightCalculator(QtGui.QDialog, ui.Ui_PlanetWeightDialog):
                 self.weightLineEdit.setText("%.1f" % self.__weight)
             self.__units = text
             self._writeCalc()
+            
+    @QtCore.pyqtSignature("")
+    def on_aboutButton_clicked(self):
+        QtGui.QMessageBox.about(self, "About Planet Weight Calculator",
+                                """
+                                <b>Planet Weight Calculator</b>
+                                <p>This application calculates your weight
+                                on the different Solar System planets and 
+                                the sun.
+                                """)
 
     def updateUi(self):
         enable = not self.weightLineEdit.text().isEmpty()
