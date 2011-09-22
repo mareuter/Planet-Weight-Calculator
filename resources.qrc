@@ -1,0 +1,5 @@
+<RCC>
+  <qresource>
+    <file alias="pwc.svg">images/pwc.svg</file>
+  </qresource>
+</RCC>
