@@ -2,6 +2,7 @@ from PyQt4 import QtGui
 from PyQt4 import QtCore
 import ui
 import info
+import version
 
 class PlanetWeightCalculator(QtGui.QDialog, ui.Ui_PlanetWeightDialog):
     def __init__(self, parent=None):
@@ -48,11 +49,11 @@ class PlanetWeightCalculator(QtGui.QDialog, ui.Ui_PlanetWeightDialog):
     def on_aboutButton_clicked(self):
         QtGui.QMessageBox.about(self, "About Planet Weight Calculator",
                                 """
-                                <b>Planet Weight Calculator</b>
+                                <b>Planet Weight Calculator</b> v%s
                                 <p>This application calculates your weight
                                 on the different Solar System planets and 
                                 the sun.
-                                """)
+                                """ % version.version)
 
     def updateUi(self):
         enable = not self.weightLineEdit.text().isEmpty()
