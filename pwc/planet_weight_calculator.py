@@ -37,10 +37,11 @@ class PlanetWeightCalculator(QtGui.QDialog, ui.Ui_PlanetWeightDialog):
             return
         else:
             if self.__units != text and self.__units != "":
-                if self.__units == "lbs" and text == "kg":
-                    self._convertWeight(info.LBS_TO_KG)
+                check = (self.__units, text)
+                if check == ("lbs", "N"):
+                    self._convertWeight(info.LBS_TO_NEWTONS)
                 else:
-                    self._convertWeight(1.0/info.LBS_TO_KG)
+                    self._convertWeight(1.0 / info.LBS_TO_NEWTONS)
                 self.weightLineEdit.setText("%.1f" % self.__weight)
             self.__units = text
             self._writeCalc()

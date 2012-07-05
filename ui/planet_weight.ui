@@ -56,7 +56,12 @@
        </item>
        <item>
         <property name="text">
-         <string>kg</string>
+         <string>N</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string/>
         </property>
        </item>
       </widget>

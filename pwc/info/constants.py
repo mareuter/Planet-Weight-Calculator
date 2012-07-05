@@ -4,7 +4,7 @@ Created on Sep 15, 2011
 @author: Michael
 '''
 
-LBS_TO_KG = 0.45359237
+LBS_TO_NEWTONS = 4.44822162825
 
 PLANETS = {
     "sun": 27.94,
