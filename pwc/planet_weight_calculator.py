@@ -40,8 +40,16 @@ class PlanetWeightCalculator(QtGui.QDialog, ui.Ui_PlanetWeightDialog):
                 check = (self.__units, text)
                 if check == ("lbs", "N"):
                     self._convertWeight(info.LBS_TO_NEWTONS)
-                else:
+                elif check == ("N", "lbs"):
                     self._convertWeight(1.0 / info.LBS_TO_NEWTONS)
+                elif check == ("lbs", "st"):
+                    self._convertWeight(info.LBS_TO_STONES)
+                elif check == ("st", "lbs"):
+                    self._convertWeight(1.0 / info.LBS_TO_STONES)
+                elif check == ("N", "st"):
+                    self._convertWeight(info.NEWTONS_TO_STONES)
+                else:
+                    self._convertWeight(1.0 / info.NEWTONS_TO_STONES)
                 self.weightLineEdit.setText("%.1f" % self.__weight)
             self.__units = text
             self._writeCalc()

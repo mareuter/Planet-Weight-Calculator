@@ -1,10 +1,12 @@
 '''
 Created on Sep 15, 2011
 
-@author: Michael
+@author: Michael Reuter
 '''
 
 LBS_TO_NEWTONS = 4.44822162825
+LBS_TO_STONES = 0.0714285714
+NEWTONS_TO_STONES = 0.0160577816031
 
 PLANETS = {
     "sun": 27.94,
